@@ -15,7 +15,7 @@ function Banner() {
     >
       <Box>
         <Image src="../../img/homepage/transparent-logo.svg" maxWidth={400} />
-        <Text as="h2" fontSize="4xl" mb={8} maxWidth="600px">
+        <Text as="h1" fontSize="4xl" mb={8} maxWidth="600px">
           A lightweight, self-hosted error monitoring tool designed to meet the
           needs of small to mid-sized development teams.
         </Text>

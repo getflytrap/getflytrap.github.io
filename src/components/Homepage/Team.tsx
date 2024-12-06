@@ -93,7 +93,7 @@ const Team = () => {
                 <Text as="div" fontSize="20" fontWeight="semibold" mb="5px">
                   {developer.name}
                 </Text>
-                <Text as="div">Software Engineeer</Text>
+                <Text as="div">Software Engineer</Text>
                 <Text as="div">{developer.location}</Text>
                 <Box display="flex" gap={4} mt="15px">
                   <Link to={developer.personalUrl}>
@@ -104,7 +104,7 @@ const Team = () => {
                       <CiGlobe size="25px" />
                     </Box>
                   </Link>
-                  <Link to={developer.linkedInUrl}>
+                  <Link to={developer.githubUrl}>
                     <Box
                       as="span"
                       _hover={{ color: "blue.500", cursor: "pointer" }}
@@ -113,7 +113,7 @@ const Team = () => {
                     </Box>
                   </Link>
 
-                  <Link to={developer.githubUrl}>
+                  <Link to={developer.linkedInUrl}>
                     <Box
                       as="span"
                       _hover={{ color: "blue.500", cursor: "pointer" }}
