@@ -93,7 +93,7 @@ const Team = () => {
                 <Text as="div" fontSize="20" fontWeight="semibold" mb="5px">
                   {developer.name}
                 </Text>
-                <Text as="div">Software Engineeer</Text>
+                <Text as="div">Software Engineer</Text>
                 <Text as="div">{developer.location}</Text>
                 <Box display="flex" gap={4} mt="15px">
                   <Link to={developer.personalUrl}>
