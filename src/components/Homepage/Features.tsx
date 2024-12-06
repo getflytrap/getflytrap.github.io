@@ -10,7 +10,7 @@ function Features() {
       <FeatureBlock
         orientation="left"
         heading="Developer Dashboard"
-        text="Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah"
+        text="blah........"
         imageSrc="../../img/homepage/projects.png"
         imageWidth="50%"
         background="white"
