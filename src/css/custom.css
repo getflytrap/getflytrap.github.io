@@ -1,18 +1,43 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* Potential color changes being considered in development:  */
+
+/* .navbar {
+  background-color: #1d7d55;
+  color: white;
+} */
+
+h2,
+h3,
+h4 {
+  color: rgb(0, 96, 0);
+}
+
+/* .table-of-contents {
+  background-color: palegreen;
+} */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
-/* .navbar {
-  background-color: #1d7d55;
-  color: white;
-} */
+.navbar__link--active {
+  color: green;
+  font-weight: bold;
+}
+
+.navbar__link--active {
+  color: green;
+  font-weight: bold;
+}
+
+.table-of-contents__link--active {
+  color: green;
+  font-weight: bold;
+}
+
+a:hover {
+  color: green !important;
+}
 
 .iconExternalLink_nPIU {
   display: none;
