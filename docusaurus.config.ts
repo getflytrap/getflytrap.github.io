@@ -42,11 +42,11 @@ const config: Config = {
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Flytrap",
-      // logo: {
-      //   alt: "Flytrap Logo",
-      //   src: "img/logo.svg",
-      // },
+      // title: "Flytrap",
+      logo: {
+        alt: "Flytrap Logo",
+        src: "img/dark-logo.svg",
+      },
       items: [
         { to: "/case-study", label: "Case Study", position: "right" },
         {
