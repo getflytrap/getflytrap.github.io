@@ -104,7 +104,7 @@ const Team = () => {
                       <CiGlobe size="25px" />
                     </Box>
                   </Link>
-                  <Link to={developer.linkedInUrl}>
+                  <Link to={developer.githubUrl}>
                     <Box
                       as="span"
                       _hover={{ color: "blue.500", cursor: "pointer" }}
@@ -113,7 +113,7 @@ const Team = () => {
                     </Box>
                   </Link>
 
-                  <Link to={developer.githubUrl}>
+                  <Link to={developer.linkedInUrl}>
                     <Box
                       as="span"
                       _hover={{ color: "blue.500", cursor: "pointer" }}
