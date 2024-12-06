@@ -37,7 +37,8 @@ const TripleFeature: React.FC = () => {
             color="gray.600"
             textAlign={{ base: "left", md: "center" }}
           >
-            Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah...
+            Flytrap processes and stores error data on the user's own AWS
+            infrastructure, allowing users to maintain full ownership of data
           </Text>
         </Box>
       </VStack>
@@ -66,7 +67,8 @@ const TripleFeature: React.FC = () => {
             color="gray.600"
             textAlign={{ base: "left", md: "center" }}
           >
-            Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah...
+            As a self-hosted service, Flytrap provides users with full control
+            over the cost, configuration, and security of their infrastructure
           </Text>
         </Box>
       </VStack>
@@ -78,6 +80,7 @@ const TripleFeature: React.FC = () => {
           alt="Flytrap Feature Image"
           objectFit="cover"
           w="200px"
+          h="220px"
         />
         <Box
           w="300px"
@@ -94,7 +97,8 @@ const TripleFeature: React.FC = () => {
             color="gray.600"
             textAlign={{ base: "left", md: "center" }}
           >
-            Blah, blah, blah, blah, blah, blah, blah, blah, blah, blah, blah...
+            Flytrap's fully automated and streamlined deployment process
+            provisions and configures all required AWS infrastructure in minutes
           </Text>
         </Box>
       </VStack>
