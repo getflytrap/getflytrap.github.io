@@ -182,6 +182,7 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({
               {heading}
             </Heading>
             <Text
+              maxWidth="700px"
               fontSize={{ base: "md", md: "lg" }}
               color="gray.600"
               textAlign={{ base: "left", md: "center" }}
