@@ -10,7 +10,7 @@ function Features() {
       <FeatureBlock
         orientation="left"
         heading="Developer Dashboard"
-        text="Flytrap's intuitive dashboard allows developers to view real-time error data, including detailed reports, stack traces, and user impact, for quick resolution. The platform's admin console handles setup and configuration, enabling teams to efficiently monitor and address errors within their applications"
+        text="Flytrap's intuitive dashboard allows developers to view real-time error data, including detailed reports, stack traces, and user impact, for quick resolution"
         imageSrc="../../img/homepage/projects.png"
         imageWidth="50%"
         background="white"
