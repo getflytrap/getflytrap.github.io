@@ -23,7 +23,6 @@ const Team = () => {
       name: "Rebecca Biancofiore",
       location: "Chattanooga, TN",
       avatarUrl: "https://avatars.githubusercontent.com/u/58274427?v=4",
-      personalUrl: "https://www.rlbianco.com",
       linkedInUrl: "https://www.linkedin.com/in/rebecca-biancofiore-8341b5225/",
       githubUrl: "https://github.com/fenris55",
       email: "rebeccabiancofiore79@gmail.com",
@@ -32,7 +31,6 @@ const Team = () => {
       name: "Anthony Kovatch",
       location: "New York, NY",
       avatarUrl: "https://avatars.githubusercontent.com/u/96496455?v=4",
-      personalUrl: "https://www.linkedin.com/in/anthony-kovatch/",
       linkedInUrl: "https://www.linkedin.com/in/anthony-kovatch/",
       githubUrl: "https://github.com/Akovatch",
       email: "Anthonykovatch@gmail.com",
@@ -50,7 +48,6 @@ const Team = () => {
       name: "Saul Thompson",
       location: "Seattle, WA",
       avatarUrl: "https://avatars.githubusercontent.com/u/118783042?v=4",
-      personalUrl: "https://www.saulthompson.com",
       linkedInUrl: "https://www.linkedin.com/in/saulthompson",
       githubUrl: "https://github.com/saulthompson",
       email: "saulthompson@hotmail.co.uk",
@@ -96,14 +93,14 @@ const Team = () => {
                 <Text as="div">Software Engineer</Text>
                 <Text as="div">{developer.location}</Text>
                 <Box display="flex" gap={4} mt="15px">
-                  <Link to={developer.personalUrl}>
+                  {/* <Link to={developer.personalUrl}>
                     <Box
                       as="span"
                       _hover={{ color: "blue.500", cursor: "pointer" }}
                     >
                       <CiGlobe size="25px" />
                     </Box>
-                  </Link>
+                  </Link> */}
                   <Link to={developer.githubUrl}>
                     <Box
                       as="span"
