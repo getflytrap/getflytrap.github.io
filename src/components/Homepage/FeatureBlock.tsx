@@ -113,6 +113,7 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({
             w={imageWidth}
             boxShadow={boxShadow}
             order={{ base: 0, md: 0 }}
+            background="white"
           />
           {/* Text */}
           <Box
@@ -205,6 +206,7 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({
               w="100%"
               h="100%"
               boxShadow="3px 3px 3px lightgray"
+              background="white"
             />
           </Box>
         </Stack>
