@@ -20,7 +20,7 @@ function Features() {
         orientation="right"
         heading="Notifications"
         text="Recieve alerts when errors occur, enabling timely response to emerging issues"
-        imageSrc="../../img/homepage/SNS.png"
+        imageSrc="../../img/homepage/sns-notifications.png"
         imageWidth="50%"
         background="gray.100"
         boxShadow="3px 3px 3px lightgray"
