@@ -48,7 +48,7 @@ const Team = () => {
       name: "Saul Thompson",
       location: "Seattle, WA",
       avatarUrl: "https://avatars.githubusercontent.com/u/118783042?v=4",
-      linkedInUrl: "https://www.linkedin.com/in/saulthompson",
+      linkedInUrl: "https://www.linkedin.com/in/saul-thompson-71a58b17a",
       githubUrl: "https://github.com/saulthompson",
       email: "saulthompson@hotmail.co.uk",
     },
