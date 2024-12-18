@@ -130,44 +130,46 @@ Flytrap’s SDKs are built to collect only the data necessary for debugging, min
 Flytrap stands out by allowing teams to deploy all infrastructure on their own AWS accounts. This gives organizations complete control over their error data, aligning with privacy and compliance requirements while avoiding vendor lock-in. This also means full ownership and control over sensitive error data and source code, mitigating concerns about third-party storage and privacy. Additionally, Flytrap simplifies the deployment process by reducing setup complexity through automated provisioning.
 
 #### Comparative Analysis
+
 A side-by-side comparison of Flytrap and established tools highlights its position in the error monitoring landscape:
-
-
-
 
 This comparison underscores Flytrap’s niche: a lightweight tool designed for small to mid-sized development teams that prioritize efficient error monitoring, data ownership, and infrastructure control without the distractions of observability or performance tracking.
 
 By focusing exclusively on error monitoring, Flytrap fills a gap in the landscape, offering a practical and efficient alternative to more complex platforms. This makes it an ideal choice for teams that value simplicity, transparency, and privacy. Flytrap may not be the right choice for teams seeking fully integrated observability or those without access to AWS.
 
-
 ## Flytrap Architecture
-Flytrap's architecture is a robust and carefully designed system that balances scalability, security, and user-specific provisioning. The platform is fully provisioned via Terraform and hosted within the user's AWS account, offering full control over the infrastructure while maintaining isolation and compliance. 
+
+Flytrap's architecture is a robust and carefully designed system that balances scalability, security, and user-specific provisioning. The platform is fully provisioned via Terraform and hosted within the user's AWS account, offering full control over the infrastructure while maintaining isolation and compliance.
 
 <img src="/img/case-study/diagrams/error-monitoring-process.png" alt="Error Monitoring Process" className="max-width" />
 
 Flytrap utilizes a streamlined pipeline to efficiently detect, process, store, and report errors. This design provides a seamless flow of information, enabling timely insights while maintaining robust security and scalability. In the upcoming sections, we will explore each component of Flytrap’s architecture in detail, following the journey of an error from capture to resolution.
 
 ### SDK Development: Cross-Platform Error Handling
+
 Flytrap SDKs provide consistent error handling across diverse environments, including React, Vanilla JS, Express, and Flask. Designed for ease of use, the SDKs feature a modular structure that simplifies integration for developers. Captured errors are standardized into a unified JSON schema to ensure seamless backend processing.
 
 #### SDK Integration
+
 - React & Express: Installed via npm.
 - Flask: Integrated via pip.
 - Vanilla JS: Imported via script tags.
 
 #### Error Capture Mechanisms
+
 - React: Integrates with lifecycle methods for client-side exceptions.
 - Express & Flask: Captures errors via middleware and WSGI layers.
 - Vanilla JS: Uses window.onerror and window.onunhandledrejection.
 - Manual Error Capture: All SDKs provide a method for developers to manually capture errors in try/catch blocks or other contexts where automatic capture is insufficient.
 
 #### Unified Error Schema
+
 Errors are normalized into a consistent JSON structure that includes:
+
 - Name, message, and stack trace.
 - Code context and metadata, such as method, path, OS, browser, and runtime (when applicable).
 
-This uniform schema ensures that the Flytrap backend processes errors efficiently while providing developers with actionable debugging insights. Once captured and standardized, the SDK securely transmits the formatted payloads to the API Gateway, marking the start of the backend processing pipeline. 
-
+This uniform schema ensures that the Flytrap backend processes errors efficiently while providing developers with actionable debugging insights. Once captured and standardized, the SDK securely transmits the formatted payloads to the API Gateway, marking the start of the backend processing pipeline.
 
 <img src="/img/case-study/diagrams/api-gateway2.png" alt="AWS API Gateway" className="max-width" />
 <img src="/img/case-study/diagrams/sqs-queue2.png" alt="AWS SQS" className="max-width" />

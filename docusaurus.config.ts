@@ -49,6 +49,8 @@ const config: Config = {
       },
       items: [
         { to: "/case-study", label: "Case Study", position: "right" },
+        { to: "/using-flytrap", label: "Using Flytrap", position: "right" },
+
         {
           to: "/#team",
           label: "Team",
