@@ -40,6 +40,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: "light", // This sets the default theme to light
+      disableSwitch: true, // Disable the theme switcher
+      respectPrefersColorScheme: false, // Optional: respects user's OS color scheme preference (false here)
+    },
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       // title: "Flytrap",
