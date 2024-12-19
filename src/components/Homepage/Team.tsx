@@ -37,7 +37,7 @@ const Team = () => {
     },
     {
       name: "Clarissa Röder",
-      location: "Greater Munich Metropolitan Area, Germany",
+      location: "Greater Munich Area, Germany",
       avatarUrl: "https://avatars.githubusercontent.com/u/123587588?v=4",
       personalUrl: "https://www.clarissaroeder.com",
       linkedInUrl: "https://www.linkedin.com/in/clarissaroeder/",
@@ -58,7 +58,7 @@ const Team = () => {
     <Box id="team">
       <VStack spacing={6} my={8}>
         <Heading as="h2" variant="light">
-          Developed By:
+          Meet Team Flytrap
         </Heading>
         <Flex
           justify="space-between"
