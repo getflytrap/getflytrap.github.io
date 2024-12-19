@@ -17,7 +17,7 @@ const TripleFeature: React.FC = () => {
       {/* Data Ownership */}
       <VStack w="400px" alignItems="center">
         <Image
-          src="../../img/homepage/data-ownership.svg"
+          src="../../img/homepage/data-ownership.png"
           alt="Flytrap Feature Image"
           objectFit="cover"
           w="200px"
@@ -46,7 +46,7 @@ const TripleFeature: React.FC = () => {
       {/* Infrastructure Control*/}
       <VStack w="400px" alignItems="center">
         <Image
-          src="../../img/homepage/infrastructure-control.svg"
+          src="../../img/homepage/infrastructure-control.png"
           alt="Flytrap Feature Image"
           width="50px"
           objectFit="cover"
@@ -76,10 +76,11 @@ const TripleFeature: React.FC = () => {
       {/* Hassle-free Deployment */}
       <VStack w="400px" alignItems="center">
         <Image
-          src="../../img/homepage/3-panel-Terraform.svg"
+          src="../../img/homepage/terraform.png"
           alt="Flytrap Feature Image"
           objectFit="cover"
           w="200px"
+          h="200px"
         />
         <Box
           w="300px"

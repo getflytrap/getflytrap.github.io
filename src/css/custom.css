@@ -721,3 +721,7 @@ html {
 .max-height {
   max-height: 500px;
 }
+
+h1.banner {
+  color: #D1E7BA;
+}
