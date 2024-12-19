@@ -185,7 +185,7 @@ This uniform schema ensures that the Flytrap backend processes errors efficientl
 <img src="/img/case-study/diagrams/error-processing-vs-error-management-branches.png" alt="AWS EC2" className="max-width" />
 <img src="/img/case-study/diagrams/firehose-problem.png" alt="AWS EC2" className="max-width" />
 <img src="/img/case-study/diagrams/web-sockets-vs-sse.png" alt="AWS EC2" className="max-width" />
-<img src="/img/case-study/diagrams/setup-journey.png" alt="AWS EC2" className="max-width" />
+<img src="/img/case-study/diagrams/setup-journey-colored.png" alt="AWS EC2" className="max-width" />
 
 <video controls autoPlay muted loop>
   <source src="/img/case-study/diagrams/flytrap-ui-demo.mp4" type="video/mp4" />
