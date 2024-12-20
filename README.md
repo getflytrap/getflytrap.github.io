@@ -43,7 +43,7 @@ For detailed setup instructions, visit our [installation guide](https://github.c
 Flytrap is built by a passionate team of engineers dedicated to simplifying error monitoring and empowering development teams. Our mission is to create tools that are lightweight, privacy-first, and developer-friendly.
 
 [Rebecca Biancofiore](https://github.com/fenris55) | Software Engineer | Chattanooga, TN  
-[Anthony Kovatch](https://github.com/Akovatch) | Software Engineer | New York, NY
+[Anthony Kovatch](https://github.com/Akovatch) | Software Engineer | New York, NY  
 [Clarissa Roeder](https://github.com/clarissaroeder) | Software Engineer | Greater Munich Metropolitan Area, Germany  
 [Saul Thompson](https://github.com/saulthompson) | Software Engineer | Seattle, WA
 

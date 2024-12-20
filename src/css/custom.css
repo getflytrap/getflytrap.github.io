@@ -714,14 +714,54 @@ html {
   scroll-behavior: smooth;
 }
 
-.max-width {
+.max-width-700 {
   max-width: 700px;
 }
 
-.max-height {
-  max-height: 500px;
+.max-width-500 {
+  max-width: 500px;
+}
+
+.max-width-400 {
+  max-width: 400px;
+}
+
+.max-height-400 {
+  max-height: 400px;
 }
 
 h1.banner {
   color: #D1E7BA;
+  /* font-size: 2rem; */
+}
+
+.icon-small {
+  height: 70px;
+  width: 80px;
+  margin-right: 2rem;
+}
+
+.icon-medium {
+  height: 90px;
+  width: 100px;
+  margin-right: 2rem;
+}
+
+.flex-list {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
+}
+
+.font-small {
+  font-size: 0.8rem;
 }
