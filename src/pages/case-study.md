@@ -122,7 +122,7 @@ For some teams, the use of third-party servers to store error data may also rais
   
 <div className="flex-list">
   <div className="flex-container">
-    <img src="/img/case-study/diagrams/icon-overengineered-solutions.png " alt="Overengineered Solutions Icon" className="icon-medium" />
+    <img src="/img/case-study/diagrams/icon-overengineered-solutions.png " alt="Overengineered Solutions Icon" className="icon-small" />
     <div>
       #### Overengineered Solutions
       
@@ -131,7 +131,7 @@ For some teams, the use of third-party servers to store error data may also rais
   </div>
     
   <div className="flex-container">
-    <img src="/img/case-study/diagrams/icon-performance-overhead.png " alt="Overengineered Solutions Icon" className="icon-medium" />
+    <img src="/img/case-study/diagrams/icon-performance-overhead.png " alt="Overengineered Solutions Icon" className="icon-tall" />
     <div>
       #### Performance Overhead
       
@@ -140,7 +140,7 @@ For some teams, the use of third-party servers to store error data may also rais
   </div>
     
   <div className="flex-container">
-    <img src="/img/case-study/diagrams/icon-privacy-lack.png " alt="Overengineered Solutions Icon" className="icon-medium" />
+    <img src="/img/case-study/diagrams/icon-privacy-lack.png " alt="Overengineered Solutions Icon" className="icon-tall" />
     <div>
       #### Lack of Data Privacy and Control
       
@@ -373,20 +373,16 @@ By partitioning these workloads, Flytrap provides a scalable solution for handli
 
 In production environments, JavaScript code is often minified to reduce file size and improve performance. While this optimization benefits end users, it complicates debugging by making stack traces difficult to interpret. Developers need a way to translate these minified stack traces back into the original source code for effective debugging. Source maps<sup>[7](#ref7)</sup> are the standard way to achieve this, but handling them comes with a challenge: ensuring privacy and security while still offering accurate and actionable error traceability.
 
+<div className="center">**Other Solutions: Developers Upload Source Maps to Third-Party Service**</div>
+<img src="/img/case-study/diagrams/source-maps-3rd-party-upload.png" alt="Third-Party Source Maps Upload" className="max-width-500" />
+
 #### Solution: Secure Source Map Handling with AWS S3 Integration
 
 Flytrap provides support for source map uploads, enabling the translation of minified code back to the original source code. To tackle the privacy concerns associated with source maps, Flytrap takes a privacy-first approach. Instead of requiring users to make their source maps publicly accessible or upload them to third-party services, Flytrap allows users to upload inline source maps to their own AWS S3 bucket. This guarantees that only the user can access and reconstruct the original source code.
 
-<div className="flex-container">
-  <div>
-    <div className="center font-small">**Other: Developers Upload Source Maps to Third-Party Service**</div>
-    <img src="/img/case-study/diagrams/source-maps-3rd-party-upload.png" alt="Third-Party Source Maps Upload" className="max-width-400" />
-  </div>
-  <div>
-    <div className="center font-small">**Flytrap: Developers Upload Source Maps to their Own S3 Bucket**</div>
-    <img src="/img/case-study/diagrams/source-maps-bucket-upload.png" alt="S3 Bucket Source Maps Upload" className="max-width-400" />
-  </div>
-</div>
+<div className="center">**Flytrap: Developers Upload Source Maps to their Own S3 Bucket**</div>
+<img src="/img/case-study/diagrams/source-maps-bucket-upload.png" alt="S3 Bucket Source Maps Upload" className="max-width-500" />
+
 
 Flytrap’s Lambda function plays a critical role in this integration. It inspects incoming stack traces for the presence of `.min` in the filenames, which typically indicates minified code. If a stack trace indicates minified code, Flytrap looks for the corresponding source map in the user’s S3 bucket. If a source map is found, Flytrap uses it to generate an unminified stack trace and contextual information for the developer. If no source map is found, Flytrap defaults to using the minified data to ensure performance is not compromised.
 
@@ -426,7 +422,7 @@ The primary challenge Flytrap addresses is ensuring developers reƒceive timely 
 While Server-Sent Events (SSE) were initially considered for near real-time notifications, WebSockets were ultimately chosen due to their scalability and efficiency within a Flask-based setup. SSE relies on long-lived HTTP connections<sup>[8](#ref8)</sup>, which can cause performance bottlenecks and reliability issues within Flask’s synchronous Web Server Gateway Interface (WSGI) model<sup>[9](#ref9)</sup>. WSGI is a standard interface between web servers and Python web applications that handles requests in a synchronous manner. In contrast, WebSockets operate over a single, persistent TCP connection<sup>[10](#ref10)</sup>, thereby bypassing the limitations of HTTP and Flask’s synchronous architecture, and allowing Flytrap to handle notifications with reduced latency and more efficient communication. This Flask-specific design choice ensures scalability and better overall performance, while also providing enhanced security through header-based token transmission.
 
 <div className="center">**SSE vs. WebSockets**</div>
-<img src="/img/case-study/diagrams/web-sockets-vs-sse.png" alt="Websockets vs SSE" className="max-width-500" />
+<img src="/img/case-study/diagrams/web-sockets-vs-sse.png" alt="Websockets vs SSE" className="max-width-700" />
 
 WebSockets also provide key security benefits. They allow for the secure transmission of tokens in headers rather than query strings, reducing the risks of sensitive data exposure. Additionally, WebSockets allow the creation of specific “rooms”<sup>[11](#ref11)</sup>, ensuring that notifications are scoped only to users actively working on the relevant project. This feature is difficult to implement effectively with SSE, making WebSockets a more suitable choice for Flytrap’s project-specific notifications. 
 A key tradeoff when using WebSockets is the need to handle both HTTP and WebSocket traffic on the same server, which can introduce scaling challenges under heavy load. However, Flytrap’s architecture intentionally separates high-load processing from the EC2 instance managing WebSocket traffic, ensuring that scaling concerns are minimized. The use of WebSockets also future-proofs the platform for bidirectional features such as collaborative debugging, which may be integrated into Flytrap’s roadmap.

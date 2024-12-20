@@ -3,7 +3,7 @@ import { Box, Heading, Text, Stack, Image } from "@chakra-ui/react";
 
 interface FeatureBlockProps {
   orientation: "left" | "right" | "top";
-  heading: string;
+  heading: string | React.ReactNode;
   text: string;
   imageSrc: string;
   imageWidth: string | { base: string; md: string; lg: string };
