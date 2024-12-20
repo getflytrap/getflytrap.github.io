@@ -30,13 +30,22 @@ function Features() {
         heading="Support for Multiple Platforms"
         text="Flytrap detects and reports errors occurring in React, JavaScript, Express, and Flask code bases"
         imageSrc={"../../img/homepage/platforms.svg"}
-        imageWidth={{ base: "70%", md: "50%", lg: "40%" }}
+        imageWidth={{ base: "60%", md: "50%", lg: "40%" }}
         background="white"
         boxShadow="none"
       />
       <FeatureBlock
         orientation="top"
-        heading="Powered By AWS"
+        heading={
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <h1>Powered By</h1>
+            <img
+              src="../../img/homepage/aws.png"
+              alt="Powered by AWS Cloud Computing"
+              style={{ maxWidth: '90px', height: 'auto', margin: '0 1rem'}}
+            />
+          </div >
+        }
         text="Flytrap deploys on the user's own Amazon Web Services infrastructure, utilizing AWS's powerful features to provide reliable and scalable performance"
         imageSrc="../../img/homepage/full-architecture.png"
         imageWidth="auto"

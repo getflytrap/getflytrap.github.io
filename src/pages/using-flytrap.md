@@ -6,73 +6,99 @@ sidebar_label: using-flytrap
 
 # How to Use Flytrap
 
-## Admin Console
+This guide walks you through how to use both the Admin Console and Developer Dashboard.
 
-1. **Log in to the Admin Console:** Visit the Flytrap client dashboard URL in the browser (or use your custom domain if you've configured DNS). Log in
-   using the default admin email and password provided in the Terraform command line outputs. Select Change Password to update your default admin email and password.
+## Admin Console 
+### 🔐 Log in to the Admin Console
 
-<img src="/screenshots/loginPage.png" alt="Costs of Errors" className="max-width" />
+  - **Access the Dashboard:** Open your browser and navigate to the Flytrap client dashboard URL. If you've configured a custom domain, use that instead.
+  - **Log In:** Enter the default admin email and password provided in the Terraform command line outputs.
+  - **Update Credentials:** After logging in, select **Change Password** to update your default admin email and password for security.
 
-2. **Create Projects:** Click on Create Project. Give your project a name and select from among the available SDKs (React,
-   Vanilla JS, Express, Flask).
 
-<img src="/screenshots/projectSetup.png" alt="Costs of Errors" className="max-width" />
+<img src="/screenshots/loginPage.png" alt="Costs of Errors" className="max-width-700" />
 
-3. **Follow SDK Setup Instructions:** The admin console provides detailed installation instructions for each SDK.
-   - The React and Express SDKs are available as npm packages.
-   - The Flask SDK is available as a PyPi package.
-   - The Vanilla JS SDK is installed by adding a `<script>` tag to your existing application.
+### 📁 Create Projects
 
-You'll be provided with a code snippet for initializing the Flytrap SDK in your application. You can also choose to manually add Flytrap's `captureException` method to your application as needed to catch data about handled errors (e.g., inside a try/catch block).
+  - **Navigate to Projects:** Click on **Create Project** in the Admin Console.
+  - **Name:** Enter a unique name for your project.
+  - **Select SDK:** Choose from the available SDKs (React, Vanilla JS, Express, Flask).
 
-<img src="/screenshots/reactSDKInstructions.png" alt="Costs of Errors" className="max-width" />
+<img src="/screenshots/projectSetup.png" alt="Costs of Errors" className="max-width-700" />
 
-4. **Add Users to Projects:** Once a Flytrap SDK is initialized in your application, you can add developers to each project. Select Create New User in the admin console. You’ll be prompted to add users, who can then be assigned to specific projects. Users only have access to error data for the
-   projects they are assigned to.
+### 🖥️ Set Up the SDK
 
-<img src="/screenshots/adminConsole.png" alt="Costs of Errors" className="max-width" />
+Flytrap provides detailed installation instructions for each SDK:
 
-5. **Test Flytrap Setup:** The Flytrap SDK setup instructions include a code snippet for generating a sample error. You can add this to your application to test that the Flytrap infrastructure and SDK installation have been set up correctly.
+  - **React and Express SDKs:** Available as npm packages.
+  - **Flask SDK:** Available as a PyPi package.
+  - **Vanilla JS SDK:** Install by adding a `<script>` tag to your existing application.
+
+**Initialization:**
+
+  - Use the provided code snippet to initialize the Flytrap SDK in your application.
+  - Optionally, manually add Flytrap's `captureException` method within your code (e.g., inside a `try/catch block`) to capture handled errors.
+
+<img src="/screenshots/reactSDKInstructions.png" alt="Costs of Errors" className="max-width-700" />
+
+### 👥 Add Users to Projects
+
+Once a Flytrap SDK is initialized in your application, you can add developers to each project.
+
+- **Add Developers:**
+  - Click on **Create New User** in the Admin Console.
+  - Enter the user's details and assign them to specific projects.
+  - **Access Control:** Users will only have access to error data for the projects they are assigned to.
+
+
+<img src="/screenshots/adminConsole.png" alt="Costs of Errors" className="max-width-700" />
+
+### 🧪 Test Flytrap Setup 
+
+  - **Generate a Sample Error:** Use the provided code snippet from the SDK setup instructions to create a test error in your application.
+  - **Verify Setup:** Confirm that the sample error appears in the Flytrap dashboard, ensuring the SDK and infrastructure are correctly configured.
 
 ---
 
-## Developer Dashboard
+## Developer Dashboard 
 
-1. **Access the Dashboard:** After being assigned to a project, developers can log in to the Flytrap dashboard using their credentials. The dashboard serves as the central hub for monitoring and resolving errors in near real-time.
+### 👩‍💻 Access the Dashboard
 
-<img src="/screenshots/projectsDashboard.png" alt="Costs of Errors" className="max-width" />
+- **Login:** After being assigned to a project, log in to the Flytrap dashboard using your credentials.
+- **Dashboard Overview:** The dashboard serves as the central hub for monitoring and resolving errors in near real-time.
 
-2. **View and Filter Errors:** Developers can view all project errors on the Issues page and use the filtering tools to focus on:
+<img src="/screenshots/projectsDashboard.png" alt="Costs of Errors" className="max-width-700" />
 
-   - Handled versus unhandled errors
-   - Resolved versus unresolved errors
-   - Time periods
+### 🔍 View and Filter Errors
 
-   This helps prioritize fixes for issues with the greatest user impact or urgency.
+  - **Navigate to Issues:** Go to the **Issues** page to see all project errors.
+  - **Use Filtering Tools:** Apply filters to focus on:
+    - **Handled vs. Unhandled Errors**
+    - **Resolved vs. Unresolved Errors**
+    - **Specific Time Periods**
 
-<img src="/screenshots/issuesPage.png" alt="Costs of Errors" className="max-width" />
+These filters help prioritize fixes based on user impact and urgency.
 
-3. **View Error Data:** The dashboard provides a near real-time view of all captured errors, sorted by project. Error data includes:
+<img src="/screenshots/issuesPage.png" alt="Costs of Errors" className="max-width-700" />
 
-   - **Error type**
-   - **Stack trace**
-   - **Affected users**
-   - **Timestamp**
+### 📊 View Error Data
 
-<img src="/screenshots/errorPage.png" alt="Costs of Errors" className="max-width" />
+The dashboard provides an overview of all captured errors, sorted by project:
 
-When stack trace data is available, users can interact with it by clicking on each line in the stack trace. Clicking expands
-the corresponding section to reveal the error line with red syntax highlighting, providing quick visual context for the issue.
+<img src="/screenshots/errorPage.png" alt="Costs of Errors" className="max-width-700" />
 
-<img src="/screenshots/expressStackTrace.png" alt="Costs of Errors" className="max-width" />
+**Interact with Stack Traces:** Click on each line of the stack trace to expand and view the error line with red syntax highlighting, offering quick visual context.
 
-4. **Resolve Errors:** Errors can be:
+<img src="/screenshots/expressStackTrace.png" alt="Costs of Errors" className="max-width-700" />
 
-   - Marked as handled (indicating that the error has been addressed).
-   - Deleted (if the error no longer needs attention).
+**Additional Information:**
 
-   The interface is designed to streamline error resolution and ensure a smooth workflow.
+- **Resolve Errors:** 
+  - **Mark as Handled:** Indicate that an error has been addressed.
+  - **Delete Errors:** Remove errors that no longer need attention.
+- **Monitor User Impact:** Flytrap tracks the number of users affected by each error, allowing you to prioritize fixes for issues that impact more users.
+- **Iterate and Improve:** Continuously monitor your applications for new issues and ensure errors are resolved promptly to maintain application stability.
 
-5. **Monitor User Impact:** Flytrap tracks the number of users affected by each error. This data provides actionable insights for prioritizing fixes, allowing developers to focus on high-impact issues first.
+--------------
 
-6. **Iterate and Improve:** Use Flytrap to continuously monitor your applications for new issues and ensure errors are resolved promptly. The dashboard’s intuitive interface minimizes distractions, allowing teams to focus on improving the user experience.
+For questions or issues, feel free to contact the Flytrap team. 🚀

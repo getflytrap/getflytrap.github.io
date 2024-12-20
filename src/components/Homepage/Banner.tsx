@@ -25,11 +25,20 @@ function Banner() {
       <Box>
         <Link href="/case-study" _hover={{ textDecoration: "none" }}>
           <Button 
-          colorScheme="teal" 
-          height="4rem" 
+          backgroundColor="transparent"
+          border="1px solid #D1E7BA"
+          color="#D1E7BA"
+          height="4rem"
           my={8} 
           fontSize="20px"
           px="24px"
+          transition="background-color 0.3s, transform 0.2s"
+          _hover={{
+            backgroundColor: "#319997",
+            border: "1px solid #319997",
+            color: "white",
+            transform: "scale(1.05)",
+          }}
           >
             Read our Case Study
           </Button>
