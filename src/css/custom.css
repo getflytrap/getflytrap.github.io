@@ -749,6 +749,10 @@ h1.banner {
   margin-bottom: 1rem;
 }
 
+.small-top-margin {
+  margin-top: 1rem;
+}
+
 .flex-list {
   display: flex;
   flex-direction: column;
