@@ -502,7 +502,7 @@ p {
   margin-bottom: 15px !important;
   margin-top: 15px;
   line-height: 1.6rem;
-  font-family: Manrope, sans-serif;
+  /* font-family: Manrope, sans-serif; */
 }
 
 .table-of-contents__left-border {
@@ -524,7 +524,7 @@ p {
 .markdown {
   max-width: 900px;
   margin: 0 auto;
-  font-family: inter;
+  font-family: Inter, sans-serif;
   font-size: 18px;
   line-height: 32px;
 }
