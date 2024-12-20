@@ -355,9 +355,6 @@ This section examines some of the key engineering challenges encountered during 
 
 One of the key architectural decisions made in Flytrap was to separate the error processing pipeline from the full-stack application. This was necessary to handle the vastly different loads between the two systems, especially in high-load scenarios where error processing can overwhelm infrastructure. For example, in cases where an infinite loop or a flood of errors from an application causes a spike in error logs, Flytrap’s error processing system must be equipped to handle this spike without affecting the performance of the dashboard application.
 
-<div className="center">**Two Pipelines: Error Processing and Error Management**</div>
-<img src="/img/case-study/diagrams/two-pipelines.png" alt="Error Processing vs Error Management Pipeline" className="max-width-500" />
-
 #### Solution: Separate Architectural Branches via AWS Services
 
 Flytrap addresses this challenge by creating a clear separation between the error processing pipeline and the full-stack application. The error processing system consists of multiple components: API Gateway, SQS queue, and Lambda function. This system is designed to manage high-volume incoming error data. In the event of a traffic spike—such as an infinite loop generating massive amounts of logs—Flytrap utilizes an SQS message queue to buffer and throttle error messages. This helps prevent an overwhelming influx of data from disrupting the rest of the system. The SQS queue ensures that even in high-load situations, error data is processed efficiently, without causing system downtime or poor performance.
@@ -365,6 +362,9 @@ Flytrap addresses this challenge by creating a clear separation between the erro
 <img src="/img/case-study/diagrams/firehose-problem.png" alt="Firehose Problem" className="max-width-700" />
 
 Meanwhile, the fullstack application, which is used primarily by a single development team, is intentionally designed to have a much lower and more predictable load. This separation allows the two systems to scale independently. Any issues within the error processing pipeline—like traffic spikes or bottlenecks—do not directly impact the main application, which is essential for maintaining an uninterrupted developer workflow.
+
+<div className="center">**Two Pipelines: Error Processing and Error Management**</div>
+<img src="/img/case-study/diagrams/two-pipelines.png" alt="Error Processing vs Error Management Pipeline" className="max-width-500" />
 
 By partitioning these workloads, Flytrap provides a scalable solution for handling error data, ensuring that both the error processing infrastructure and the main application remain stable and performant.
 
@@ -407,7 +407,7 @@ Flytrap solves this problem by providing centralized error data and delivering n
   </div>
 
   <div className="flex-container">
-    <img src="/img/case-study/diagrams/icon-popup.png" alt="Popup Alert Icon" className="icon-small" />
+    <img src="/img/case-study/diagrams/icon-popup.png" alt="Popup Alert Icon" className="icon-small small-top-margin" />
     <div>
       2. **WebSocket Pop-Ups for Active Developers**
       For developers actively working within the Flytrap dashboard, WebSockets provide near real-time pop-up notifications about new errors. This allows developers to address issues immediately without needing to refresh or sift through logs, providing instant visibility into new problems and ensuring rapid response times.
