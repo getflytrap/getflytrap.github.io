@@ -19,7 +19,7 @@ function Features() {
       <FeatureBlock
         orientation="right"
         heading="Notifications"
-        text="Recieve alerts when errors occur, enabling timely response to emerging issues"
+        text="Receive alerts when errors occur, enabling timely response to emerging issues"
         imageSrc="../../img/homepage/sns-notifications.png"
         imageWidth="50%"
         background="gray.100"

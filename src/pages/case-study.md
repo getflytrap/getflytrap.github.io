@@ -275,7 +275,7 @@ Flytrap uses an AWS Lambda function to process and store error data. Lambda oper
 
 Lambda’s ability to handle unpredictable, high-traffic loads with automatic scaling made it an appropriate design choice for Flytrap’s error processing pipeline, where load can vary significantly. The choice of Lambda helps ensure that Flytrap’s infrastructure remains both scalable and cost-effective, as users only pay for processing time and avoid the need for manual configuration to accommodate high-load scenarios.
 
-<div className="center">**Lambda Function for Event-driven Processing**</div>
+<div className="center">**Lambda Function for Event-Driven Processing**</div>
 <img src="/img/case-study/diagrams/lambda.png" alt="AWS Lambda Functionality" className="max-width-500" />
 
 After processing the Lambda writes the error data to an Amazon RDS PostgreSQL database. It then triggers a webhook to notify the Flytrap API of new data availability, enabling near real-time updates on the Flytrap dashboard and email notifications via AWS Simple Notification Service (SNS).

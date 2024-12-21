@@ -89,7 +89,7 @@ The dashboard provides an overview of all captured errors, sorted by project:
 
 **Interact with Stack Traces:** Click on each line of the stack trace to expand and view the error line with red syntax highlighting, offering quick visual context.
 
-<img src="/screenshots/expressStackTrace.png" alt="Costs of Errors" className="max-width-700" />
+<img src="/screenshots/expressStacktrace.png" alt="Costs of Errors" className="max-width-700" />
 
 **Additional Information:**
 

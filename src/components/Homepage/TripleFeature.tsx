@@ -73,7 +73,7 @@ const TripleFeature: React.FC = () => {
         </Box>
       </VStack>
 
-      {/* Hassle-free Deployment */}
+      {/* Hassle-Free Deployment */}
       <VStack w="400px" alignItems="center">
         <Image
           src="../../img/homepage/terraform.png"
