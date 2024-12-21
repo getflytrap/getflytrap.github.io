@@ -90,7 +90,7 @@ const TripleFeature: React.FC = () => {
           justifyContent="center"
         >
           <Heading as="h1" fontSize="2xl" color="gray.800" mb={4}>
-            Hassle-free Deployment
+            Hassle-Free Deployment
           </Heading>
           <Text
             fontSize={{ base: "md", md: "lg" }}
