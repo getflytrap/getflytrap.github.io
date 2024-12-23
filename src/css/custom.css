@@ -794,4 +794,8 @@ h1.banner {
   .img-medium {
     max-width: 100%;
   }
+
+  .navbar__case-study {
+    margin-top: 20px;
+  }
 }

@@ -53,7 +53,12 @@ const config: Config = {
         src: "img/dark-logo.svg",
       },
       items: [
-        { to: "/case-study", label: "Case Study", position: "right" },
+        {
+          to: "/case-study",
+          label: "Case Study",
+          position: "right",
+          className: "navbar__case-study",
+        },
         { to: "/using-flytrap", label: "Using Flytrap", position: "right" },
 
         {
