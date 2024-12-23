@@ -12,7 +12,7 @@ function Features() {
         heading="Developer Dashboard"
         text="View real-time error data, including detailed reports, stack traces, and user impact, for quick resolution of issues"
         imageSrc="../../img/homepage/projects.png"
-        imageWidth="50%"
+        imageWidth={{ base: "90%", md: "60%", lg: "50%" }}
         background="white"
         boxShadow="3px 3px 3px lightgray"
       />
@@ -21,7 +21,7 @@ function Features() {
         heading="Notifications"
         text="Receive alerts when errors occur, enabling timely response to emerging issues"
         imageSrc="../../img/homepage/sns-notifications.png"
-        imageWidth="50%"
+        imageWidth={{ base: "90%", md: "60%", lg: "50%" }}
         background="gray.100"
         boxShadow="3px 3px 3px lightgray"
       />
@@ -37,14 +37,20 @@ function Features() {
       <FeatureBlock
         orientation="top"
         heading={
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <h1>Powered By</h1>
             <img
               src="../../img/homepage/aws.png"
               alt="Powered by AWS Cloud Computing"
-              style={{ maxWidth: '90px', height: 'auto', margin: '0 1rem'}}
+              style={{ maxWidth: "90px", height: "auto", margin: "0 1rem" }}
             />
-          </div >
+          </div>
         }
         text="Flytrap deploys on the user's own Amazon Web Services infrastructure, utilizing AWS's powerful features to provide reliable and scalable performance"
         imageSrc="../../img/homepage/full-architecture.png"
