@@ -12,7 +12,7 @@ function Features() {
         heading="Developer Dashboard"
         text="View real-time error data, including detailed reports, stack traces, and user impact, for quick resolution of issues"
         imageSrc="../../img/homepage/projects.png"
-        imageWidth="50%"
+        imageWidth={{ base: "90%", md: "60%", lg: "50%" }}
         background="white"
         boxShadow="3px 3px 3px lightgray"
       />
@@ -21,7 +21,7 @@ function Features() {
         heading="Notifications"
         text="Receive alerts when errors occur, enabling timely response to emerging issues"
         imageSrc="../../img/homepage/sns-notifications.png"
-        imageWidth={{ base: "70%", md: "60%", lg: "50%" }}
+        imageWidth={{ base: "90%", md: "60%", lg: "50%" }}
         background="gray.100"
         boxShadow="3px 3px 3px lightgray"
       />
