@@ -300,6 +300,8 @@ The database schema accommodates Flytrap’s multi-project, multi-user structure
 - **Projects:** Organizes errors by application, allowing users to filter and manage data.
 - **Users:** Manages access control, ensuring developers only see data relevant to their assigned projects.
 
+<img src="/img/case-study/diagrams/flytrap-erd.png" alt="Flytrap ERD" className="img-large" />
+
 RDS provides automated backups, failover capabilities, and easy scaling, ensuring high availability and reliability for Flytrap’s users. The stored data is subsequently accessed by the Flytrap dashboard for near real-time updates and user interaction.
 
 ### Email Alerts: SNS for Developer Notification
