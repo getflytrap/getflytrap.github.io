@@ -193,7 +193,7 @@ Flytrap is ideal for teams that value simplicity, transparency, and privacy. It 
 
 ## Flytrap Architecture
 
-Flytrap's architecture was designed to prioritize scalability, security, and user-controlled infrastructure. The platform is fully provisioned via Terraform and hosted within the user's AWS account.
+Flytrap's architecture was designed for scalability, security, and user-controlled infrastructure. The platform is fully provisioned via Terraform and hosted within the user's AWS account.
 
 <img src="/img/case-study/diagrams/error-monitoring-process.png" alt="Error Monitoring Process" className="img-large" />
 
@@ -250,9 +250,9 @@ Captured errors are automatically transformed into a unified JSON schema that in
 
 ### Entry Point: API Gateway
 
-The AWS API Gateway acts as the central entry point to Flytrap’s AWS system for all incoming error data. The API Gateway is an AWS service that acts as a public-facing API endpoint. It automatically scales based on the volume of incoming requests, ensuring that even during high-traffic periods, the system remains reliable. The Flytrap SDKs transmit error payloads to this gateway, which securely receives and routes requests.
+The AWS API Gateway acts as the central entry point to Flytrap’s infrastructure for all incoming error data. The API Gateway is an AWS service that acts as a public-facing API endpoint. It automatically scales based on the volume of incoming requests, ensuring that even during high-traffic periods, the system remains reliable. The Flytrap SDKs transmit error payloads to this gateway, which securely receives and routes requests.
 
-The API Gateway uses API keys to protect against unauthorized requests, ensuring that only a user’s Flytrap SDKs can send error data through the endpoint. Additionally, request validation models are implemented to verify that all required properties are present and the data is structured correctly. After validation, the API Gateway forwards the payloads to an AWS SQS message queue, decoupling ingestion from downstream processing.
+The API Gateway uses API keys and request validations to ensure only a user’s Flytrap SDKs can send error data through the endpoint. After validation, the API Gateway forwards the payloads to an AWS SQS message queue, decoupling ingestion from downstream processing.
 
 <div className="center">**API Gateway for Scalable Request Routing**</div>
 <img src="/img/case-study/diagrams/api-gateway.png" alt="AWS API Gateway" className="img-medium" />
@@ -450,6 +450,11 @@ To streamline the deployment process, Flytrap adopted Terraform, a popular infra
 - **Customizability:** As Flytrap operates within the user’s AWS environment, organizations can tailor the deployment to align with specific compliance, security, or operational requirements.
 
 With Terraform, deploying Flytrap becomes an automated process that only requires running a few commands. For instance, EC2 instance setup scripts handle tasks like Docker initialization, repository cloning, and Nginx configuration. This ensures that every deployment is identical and reduces the risk of human error.
+
+<video controls autoPlay muted loop>
+  <source src="/img/case-study/videos/flytrap_terraform_demo.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 Challenges such as managing resource dependencies and provisioning order were overcome by splitting some resources into provisioning and configuration modules to resolve dependency conflicts, avoid circular dependencies, and ensure correct permissions across infrastructure elements.
 
