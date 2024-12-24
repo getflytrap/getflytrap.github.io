@@ -88,6 +88,8 @@ html {
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+3. Explicitly set the background to white for all devices
+4. Ensure text is visible and contrasts with the background
 */
 
 body {
@@ -95,6 +97,10 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  background-color: #ffffff;
+  /* 3 */
+  color: #000000;
+  /* 4 */
 }
 
 /*
@@ -797,5 +803,9 @@ h1.banner {
 
   .navbar__case-study {
     margin-top: 20px;
+  }
+
+  body {
+    background-color: #ffffff;
   }
 }
